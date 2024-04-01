@@ -16,12 +16,9 @@ client.on('messageCreate', async (message) => {
     };
     if (message.author.bot) return;
 
-    let args = message.content.split(" ");
-    if (!args.includes("meow") || !args) {
+    if (!message.content.includes("meow")) {
       if (message.deletable) {
         return message.delete();
-      } else {
-        return console.log("shit");
       }
     }
   } catch (error) {
