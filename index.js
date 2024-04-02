@@ -16,7 +16,7 @@ client.on('messageCreate', async (message) => {
     };
     if (message.author.bot) return;
 
-    if (!message.content.includes("meow")) {
+    if (!message.content.toLowerCase().includes("meow")) {
       if (message.deletable) {
         return message.delete();
       }
